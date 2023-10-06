@@ -37,7 +37,6 @@ class User
 
         console.log(messages);
         
-
         this.socket.emit('get-messages', messages);
     }
 
