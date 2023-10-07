@@ -14,18 +14,22 @@ function Messenger() {
 
         onChangeInput('');
     };
+    
     return(
         <View style={styles.container}>
             <Messages />
-            <TextInput 
-                value={input}
-                placeholder="Envoyer un message !"
-                onChangeText={onChangeInput}
-            />
-            <Button 
-                title="Envoyer"
-                onPress={sendMessage}
-            />
+            <View style={styles.form}>
+                <TextInput 
+                style={styles.textInput}
+                    value={input}
+                    placeholder="Message.."
+                    onChangeText={onChangeInput}
+                />
+                <Button 
+                    title="Envoyer"
+                    onPress={sendMessage}
+                />
+            </View>
         </View>
     )
 }
@@ -34,6 +38,18 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
+        backgroundColor: 'white'
+    },
+    form: {
+        backgroundColor: 'rgb(220,252,231)',
+        margin: 10,
+        padding: 15,
+        borderRadius: 24,
+        flexDirection: 'row'
+    },
+    textInput: {
+        flex: 1,
+        fontSize: 24,
     }
 })
 

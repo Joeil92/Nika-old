@@ -11,7 +11,7 @@ function Router() {
 
     return(
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Login">
+            <Stack.Navigator initialRouteName="Messenger">
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="Messenger" component={Messenger} />
                 <Stack.Screen name="Login" component={Login} />

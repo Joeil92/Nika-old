@@ -22,34 +22,7 @@ function Login({navigation}: any) {
         console.log(response);
     }
 
-    const styles = StyleSheet.create({
-        container: {
-            padding: 10,
-            flex: 1, 
-            justifyContent: 'center'
-        },
-        title: {
-            fontSize: 32,
-            textAlign: 'center'
-        },
-        emailInput: {
-            marginVertical: 5,
-            padding: 5,
-            borderRadius: 6,
-            backgroundColor: 'white'
-        },
-        passwordInput: {
-            marginVertical: 5,
-            padding: 5,
-            borderRadius: 6,
-            backgroundColor: 'white'
-        },
-        buttonRegister: {
-            marginVertical: 25,
-            alignItems: 'center'
-        }
-    })
-
+    
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Se connecter</Text>
@@ -58,23 +31,51 @@ function Login({navigation}: any) {
                 placeholder='email'
                 value={email}
                 onChangeText={onChangeEmail}
-            ></TextInput>
+                ></TextInput>
             <TextInput
                 style={styles.passwordInput}
                 secureTextEntry={true}
                 placeholder='mot de passe'
                 value={password}
                 onChangeText={onChangePassword}
-            ></TextInput>
+                ></TextInput>
             <Button
                 title='Se connecter'
                 onPress={handleSubmit}
-            />
+                />
             <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Register')}>
                 <Text>Aucun compte ? Créez en un !</Text>
             </TouchableOpacity>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 10,
+        flex: 1, 
+        justifyContent: 'center'
+    },
+    title: {
+        fontSize: 32,
+        textAlign: 'center'
+    },
+    emailInput: {
+        marginVertical: 5,
+        padding: 5,
+        borderRadius: 6,
+        backgroundColor: 'white'
+    },
+    passwordInput: {
+        marginVertical: 5,
+        padding: 5,
+        borderRadius: 6,
+        backgroundColor: 'white'
+    },
+    buttonRegister: {
+        marginVertical: 25,
+        alignItems: 'center'
+    }
+})
 
 export default Login;

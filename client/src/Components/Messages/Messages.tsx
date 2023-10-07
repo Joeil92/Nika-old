@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column-reverse'
     },
     text: {
+        fontSize: 24,
         textAlign: 'center',
         marginVertical: 10
     }
